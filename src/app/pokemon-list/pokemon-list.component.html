@@ -1,4 +1,7 @@
-<li *ngFor= 'let x of pokeArray'>
-  {{ x.name }}
+<mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile *ngFor= 'let pokemon of pokeArray.results; let i= index'>
 
-</li>
+
+<app-pokemon-card  [pokemon]='pokemon' [pokemonNum]='i+1'></app-pokemon-card>
+</mat-grid-tile>
+</mat-grid-list>

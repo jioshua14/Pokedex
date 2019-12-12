@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { PokemonInterface } from './pokemon-results';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
-  pokeArray: any[];
+  pokeArray: PokemonInterface;
   constructor(private getService: ApiService) { }
 
   ngOnInit() {
@@ -18,7 +19,7 @@ export class PokemonListComponent implements OnInit {
   getPoke() {
     this.getService.getPokemon().subscribe(pokemon => {
       console.log(pokemon.results);
-      this.pokeArray=pokemon.results
+      this.pokeArray = pokemon;
 
       Object.keys(pokemon.results).forEach(item => {
         console.log(item); // key

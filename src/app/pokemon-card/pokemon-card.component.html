@@ -1,0 +1,18 @@
+<!-- <mat-card>
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemonNum }}.png">
+<span>
+  {{ pokemonNum }} {{ pokemon.name }}
+</span>
+</mat-card> -->
+
+<mat-card class="mat-card-whole">
+    <mat-card-header>
+        <mat-card-title>{{ pokemonNum }} {{ pokemon.name | titlecase }} </mat-card-title>
+      <!-- <mat-card-subtitle>{{ pokemonNum }}</mat-card-subtitle> -->
+    </mat-card-header>
+    <mat-card-content>
+        <img class='pokemon-card' mat-card-image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemonNum }}.png" alt="Photo of a Pokemon">
+    </mat-card-content>
+
+  </mat-card>
+

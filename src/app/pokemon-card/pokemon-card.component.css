@@ -1,0 +1,13 @@
+.pokemon-card {
+  height: 60px;
+  width: auto;
+}
+
+/* .mat-card-whole{
+  height: 200px;
+  width: auto;
+} */
+/* pokemon-header-image {
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemonNum }}.png" alt="Photo of a Pokemon");
+  background-size: cover;
+} */
