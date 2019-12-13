@@ -1,7 +1,12 @@
+<br>
+<form class="form-group">
+    <input class="form-control mr-sm-2" type="text" placeholder = "Enter Pokemon Name Here" [(ngModel)]="key" name='bar'>
+  </form>
+
 <mat-grid-list cols="3" rowHeight="100px">
-    <mat-grid-tile *ngFor= 'let pokemon of pokeArray.results; let i= index'>
+    <mat-grid-tile *ngFor= "let pokemon of pokeArray.results | filter: key; let i= index">
 
 
-<app-pokemon-card  [pokemon]='pokemon' [pokemonNum]='i+1'></app-pokemon-card>
+<app-pokemon-card  [pokemon]='pokemon' [pokeLink]='pokemon?.url'></app-pokemon-card>
 </mat-grid-tile>
 </mat-grid-list>

@@ -9,6 +9,9 @@ import { PokemonPresentationComponent } from './pokemon-presentation/pokemon-pre
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import {MatCardModule} from '@angular/material/card';
     BrowserModule,
     HttpClientModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { ApiService } from '../api.service';
 import { PokemonInterface } from './pokemon-results';
 
 
+
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
@@ -10,6 +11,7 @@ import { PokemonInterface } from './pokemon-results';
 })
 export class PokemonListComponent implements OnInit {
   pokeArray: PokemonInterface;
+  key: string;
   constructor(private getService: ApiService) { }
 
   ngOnInit() {
@@ -22,11 +24,15 @@ export class PokemonListComponent implements OnInit {
       this.pokeArray = pokemon;
 
       Object.keys(pokemon.results).forEach(item => {
-        console.log(item); // key
+        console.log(item);
         console.log(pokemon.results[item]);
 
       });
     });
+  }
+
+  searchPoke() {
+    console.log(this.key)
   }
 
 
