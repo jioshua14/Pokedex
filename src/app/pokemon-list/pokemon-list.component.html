@@ -3,7 +3,7 @@
     <input class="form-control mr-sm-2" type="text" placeholder = "Enter Pokemon Name Here" [(ngModel)]="key" name='bar'>
   </form>
 
-<mat-grid-list cols="3" rowHeight="100px">
+<mat-grid-list cols="5" rowHeight="100px">
     <mat-grid-tile *ngFor= "let pokemon of pokeArray.results | filter: key; let i= index">
 
 
